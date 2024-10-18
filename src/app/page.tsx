@@ -1,101 +1,84 @@
-import Image from "next/image";
+import Button from "@mui/material/Button";
+import AppleIcon from "@mui/icons-material/Apple";
+import GoogleIcon from "@mui/icons-material/Google";
+import Navigation from "./components/navigation";
+import Footer from "./components/footer";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+	return (
+		<div className="page-container col-span-4">
+			<Navigation current={"home"} />
+			<section id="header">
+				<div className="left">
+					<h1>
+						All your notes <span>effortlessly</span> managed
+					</h1>
+					<p>
+						Staying organised shouldn't slow you down. Notepad is designed for
+						busy people who need a quick, discreet way to manage their thoughts,
+						tasks, and ideas.
+					</p>
+					<div className="button-container">
+						<Button
+							variant="contained"
+							startIcon={<AppleIcon />}
+							className="capitalize font-medium"
+							sx={{
+								backgroundColor: "var(--primary-accent-pink)",
+								borderRadius: "10000px",
+								fontWeight: "600",
+							}}
+						>
+							Apple App Store
+						</Button>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+						<Button
+							variant="contained"
+							startIcon={<GoogleIcon />}
+							className="capitalize font-medium"
+							sx={{
+								backgroundColor: "var(--primary-accent-pink)",
+								borderRadius: "10000px",
+								fontWeight: "600",
+							}}
+						>
+							Google Play Store
+						</Button>
+					</div>
+				</div>
+				<div className="right">{/* image */}</div>
+			</section>
+			<section id="features">
+				<div className="feat">
+					<img src="" alt="" />
+					<h2>Instant Search</h2>
+					<p>Find your notes in seconds, no matter how many you've created.</p>
+				</div>
+				<div className="feat">
+					<img src="" alt="" />
+					<h2>Discreet Interface</h2>
+					<p>
+						Keep your focus on what matters. Your notes are easily accessible
+						but remain out of the way until you need them.
+					</p>
+				</div>
+				<div className="feat">
+					<img src="" alt="" />
+					<h2>Mobile-Online Convenience</h2>
+					<p>
+						Notepad is optimised for on-the-go note taking for Android and
+						iPhone. Ensuring your ideas are always at your fingertips.
+					</p>
+				</div>
+			</section>
+			<section id="call-to-action">
+				<h1>Try Notepad today</h1>
+				<p>
+					Start simplifying your life today with Notepad -{" "}
+					<span className="italic">where efficiency meets ease</span>.
+				</p>
+			</section>
+			<Footer />
+		</div>
+	);
 }
