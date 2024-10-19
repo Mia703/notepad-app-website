@@ -67,7 +67,7 @@ p {
 .button-pink {
   background-color: var(--pink);
   border-radius: 10000px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .text-highlight {
@@ -78,10 +78,13 @@ p {
 /* =================== media queries =================== */
 
 /* =================== MOBILE =================== */
+/* tailwind 40em = sm */
 @media only screen and (max-width: 40em) {}
 
 /* =================== TABLET =================== */
+/* tailwind 64em = lg */
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {}
 
 /* =================== DESKTOP =================== */
+/* tailwind 90em is between xl and 2xl, go for xl? */
 @media only screen and (min-width: 64.063em) and (max-width: 90em) {}
