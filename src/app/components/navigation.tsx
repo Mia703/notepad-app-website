@@ -90,15 +90,15 @@ const Navigation: React.FC<NavigationProps> = ({ current }) => {
 			id="main-navigation"
 			className="flex flex-row justify-between items-center mb-4"
 		>
-			<div className="logo container">
-				<Link href={"#"} className="font-semibold">
+			<div className="logo">
+				<Link href={"#"} className="font-semibold" aria-label="notepad logo">
 					Notepad
 				</Link>
 			</div>
-			<div className="menu container text-right">
+			<div className="menu text-right">
 				<div className="menu mobile md:hidden">
 					<IconButton
-						aria-label="menu toggle"
+						aria-label="mobile menu toggle"
 						size="large"
 						onClick={toggleDrawer(true)}
 					>
@@ -124,8 +124,8 @@ const Navigation: React.FC<NavigationProps> = ({ current }) => {
 							href={"#"}
 							className={
 								current == "home"
-									? "border-b-2 border-solid border-[var(--pink)]"
-									: "border-b-2 border-solid border-[var(--background)] transition ease-in-out duration-300 hover:border-[var(--pink)]"
+									? "border-b-2 border-solid border-[var(--pink)] mx-4"
+									: "border-b-2 border-solid border-[var(--background)] transition ease-in-out duration-300 hover:border-[var(--pink)] mx-4"
 							}
 						>
 							Home
@@ -134,8 +134,8 @@ const Navigation: React.FC<NavigationProps> = ({ current }) => {
 							href={"#"}
 							className={
 								current == "about"
-									? "border-b-2 border-solid border-[var(--pink)]"
-									: "border-b-2 border-solid border-[var(--background)] transition ease-in-out duration-300 hover:border-[var(--pink)]"
+									? "border-b-2 border-solid border-[var(--pink)] mx-4"
+									: "border-b-2 border-solid border-[var(--background)] transition ease-in-out duration-300 hover:border-[var(--pink)] mx-4"
 							}
 						>
 							About
@@ -144,8 +144,8 @@ const Navigation: React.FC<NavigationProps> = ({ current }) => {
 							href={"#"}
 							className={
 								current == "help"
-									? "border-b-2 border-solid border-[var(--pink)]"
-									: "border-b-2 border-solid border-[var(--background)] transition ease-in-out duration-300 hover:border-[var(--pink)]"
+									? "border-b-2 border-solid border-[var(--pink)] mx-4"
+									: "border-b-2 border-solid border-[var(--background)] transition ease-in-out duration-300 hover:border-[var(--pink)] mx-4"
 							}
 						>
 							Help Centre
@@ -156,6 +156,7 @@ const Navigation: React.FC<NavigationProps> = ({ current }) => {
 							className="button-pink"
 							size="medium"
 							id="basic-button"
+							aria-label="download app dropdown menu"
 							aria-controls={dropdownOpen ? "basic-menu" : undefined}
 							aria-haspopup="true"
 							aria-expanded={dropdownOpen ? "true" : undefined}

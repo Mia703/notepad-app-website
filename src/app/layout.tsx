@@ -19,7 +19,12 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body>
-				<div id="main-grid">{children}</div>
+				<div
+					id="main-grid"
+					className="p-4 sm:grid sm:grid-cols-4 sm:gap-2 md:grid md:grid-cols-6 md:gap-4 lg:grid lg:grid-cols-12 lg:gap-4 xl:grid xl:grid-cols-12 xl:gap-4"
+				>
+					{children}
+				</div>
 			</body>
 		</html>
 	);

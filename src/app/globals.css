@@ -19,7 +19,7 @@
   --font: "Inter", sans-serif;
   --main-header-size: 3em;
   --second-header-size: 2em;
-  --third-header-size: 1.8em;
+  --third-header-size: 1.5em;
   --paragraph-size: 1em;
 }
 
@@ -52,18 +52,12 @@ h3 {
   font-size: var(--third-header-size);
 }
 
-p {
+p,
+a {
   font-size: var(--paragraph-size);
 }
 
 /* =================== constants =================== */
-#main-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  padding: 1rem;
-}
-
 .button-pink {
   background-color: var(--pink);
   border-radius: 10000px;
@@ -74,17 +68,3 @@ p {
   color: var(--pink);
   font-style: italic;
 }
-
-/* =================== media queries =================== */
-
-/* =================== MOBILE =================== */
-/* tailwind 40em = sm */
-@media only screen and (max-width: 40em) {}
-
-/* =================== TABLET =================== */
-/* tailwind 64em = lg */
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {}
-
-/* =================== DESKTOP =================== */
-/* tailwind 90em is between xl and 2xl, go for xl? */
-@media only screen and (min-width: 64.063em) and (max-width: 90em) {}

@@ -3,12 +3,12 @@ import "../globals.css";
 
 export default function Footer() {
 	return (
-		<nav
+		<footer
 			id="footer"
-			className="flex flex-row justify-between items-middle text-[var(--dark-grey)]"
+			className="flex flex-row justify-between items-middle text-[var(--dark-grey)] my-2 mt-4 sm:text-sm"
 		>
 			<div className="logo">
-				<Link href={"/"}>Notepad</Link>
+				<Link href={"/"} aria-label="notepad logo">Notepad</Link>
 			</div>
 			<div className="links">
 				<Link href={"#"} className="mx-2">
@@ -21,6 +21,6 @@ export default function Footer() {
 					Contact Us
 				</Link>
 			</div>
-		</nav>
+		</footer>
 	);
 }
