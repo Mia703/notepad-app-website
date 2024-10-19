@@ -8,12 +8,16 @@ export default function Home() {
 	return (
 		<div className="page-container col-span-4">
 			<Navigation current={"home"} />
-			<section id="header">
+			<section
+				id="header"
+				className="flex flex-row justify-between align-middle"
+			>
 				<div className="left">
 					<h1>
-						All your notes <span>effortlessly</span> managed
+						All your notes, <span className="text-highlight">effortlessly</span>{" "}
+						managed
 					</h1>
-					<p>
+					<p className="w-2/3 my-4">
 						Staying organised shouldn't slow you down. Notepad is designed for
 						busy people who need a quick, discreet way to manage their thoughts,
 						tasks, and ideas.
@@ -22,12 +26,8 @@ export default function Home() {
 						<Button
 							variant="contained"
 							startIcon={<AppleIcon />}
-							className="capitalize font-medium"
-							sx={{
-								backgroundColor: "var(--primary-accent-pink)",
-								borderRadius: "10000px",
-								fontWeight: "600",
-							}}
+							className="button-pink capitalize font-medium mx-2 ml-0"
+							aria-label="apple app store download"
 						>
 							Apple App Store
 						</Button>
@@ -35,48 +35,70 @@ export default function Home() {
 						<Button
 							variant="contained"
 							startIcon={<GoogleIcon />}
-							className="capitalize font-medium"
-							sx={{
-								backgroundColor: "var(--primary-accent-pink)",
-								borderRadius: "10000px",
-								fontWeight: "600",
-							}}
+							className="button-pink capitalize font-medium mx-2"
+							aria-label="google app store download"
 						>
 							Google Play Store
 						</Button>
 					</div>
 				</div>
-				<div className="right">{/* image */}</div>
+				<div className="right">
+					<div className="img-container w-36 h-36 bg-red-500"></div>
+				</div>
 			</section>
 			<section id="features">
-				<div className="feat">
-					<img src="" alt="" />
-					<h2>Instant Search</h2>
-					<p>Find your notes in seconds, no matter how many you've created.</p>
-				</div>
-				<div className="feat">
-					<img src="" alt="" />
-					<h2>Discreet Interface</h2>
-					<p>
-						Keep your focus on what matters. Your notes are easily accessible
-						but remain out of the way until you need them.
-					</p>
-				</div>
-				<div className="feat">
-					<img src="" alt="" />
-					<h2>Mobile-Online Convenience</h2>
-					<p>
-						Notepad is optimised for on-the-go note taking for Android and
-						iPhone. Ensuring your ideas are always at your fingertips.
-					</p>
+				<h2 className="text-center">Designed for Speed and Simplicity</h2>
+				<div className="features-container grid grid-cols-3 text-center gap-4">
+					<div className="feat">
+						<img src="" alt="" />
+						<h3>Instant Search</h3>
+						<p>
+							Find your notes in seconds, no matter how many you've created.
+						</p>
+					</div>
+					<div className="feat">
+						<img src="" alt="" />
+						<h3>Discreet Interface</h3>
+						<p>
+							Keep your focus on what matters. Your notes are easily accessible
+							but remain out of the way until you need them.
+						</p>
+					</div>
+					<div className="feat">
+						<img src="" alt="" />
+						<h3>Mobile-Online Convenience</h3>
+						<p>
+							Notepad is optimised for on-the-go note taking for Android and
+							iPhone. Ensuring your ideas are always at your fingertips.
+						</p>
+					</div>
 				</div>
 			</section>
-			<section id="call-to-action">
+			<section
+				id="call-to-action"
+				className="bg-[var(--dark-grey)] p-4 text-center rounded-xl"
+			>
 				<h1>Try Notepad today</h1>
 				<p>
 					Start simplifying your life today with Notepad -{" "}
 					<span className="italic">where efficiency meets ease</span>.
 				</p>
+				<div className="buttons-container">
+					<Button
+						variant="contained"
+						startIcon={<AppleIcon />}
+						className="mx-2"
+					>
+						iOS
+					</Button>
+					<Button
+						variant="contained"
+						startIcon={<GoogleIcon />}
+						className="mx-2"
+					>
+						Android
+					</Button>
+				</div>
 			</section>
 			<Footer />
 		</div>

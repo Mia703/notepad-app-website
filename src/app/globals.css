@@ -1,45 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* =================== imported fonts =================== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+/* ------- sub-header ------- */
+
+/* =================== global variables =================== */
 :root {
-  --primary-background: #121212;
-  --primary-dark-grey: #585858;
-  --primary-medium-grey: #c1c1c1;
-  --primary-light-grey: #e0e0e0;
-  --primary-white: white;
-  --primary-accent-pink: #e058b9;
+  --background: #121212;
+  --dark-grey: #585858;
+  --medium-grey: #c1c1c1;
+  --light-grey: #e0e0e0;
+  --white: white;
+  --pink: #e058b9;
 
-  --primary-font: "Inter", sans-serif;
-  --primary-header: 3em;
-  --primary-sub-header: 1.5em;
-  --primary-paragraph: 1em;
+  --font: "Inter", sans-serif;
+  --main-header-size: 3em;
+  --second-header-size: 2em;
+  --third-header-size: 1.8em;
+  --paragraph-size: 1em;
 }
 
+/* =================== reset default styles =================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =================== base page styles =================== */
 body {
-  background: var(--primary-background);
-  color: var(--primary-light-grey);
-  font-family: var(--primary-font);
-  font-size: var(--primary-paragraph);
+  background: var(--background);
+  color: var(--light-grey);
+  font-family: var(--font);
+  font-size: var(--paragraph);
 }
 
+/* =================== font styles =================== */
 h1 {
-  font-size: var(--primary-header);
+  font-size: var(--main-header-size);
+  text-transform: capitalize;
 }
 
 h2 {
-  font-size: var(--primary-sub-header);
+  font-size: var(--second-header-size);
 }
 
 h3 {
-  font-size: var(--primary-paragraph);
+  font-size: var(--third-header-size);
 }
 
 p {
-  font-size: var(--primary-paragraph);
+  font-size: var(--paragraph-size);
 }
 
+/* =================== constants =================== */
 #main-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -47,5 +64,24 @@ p {
   padding: 1rem;
 }
 
+.button-pink {
+  background-color: var(--pink);
+  border-radius: 10000px;
+  font-weight: 500;
+}
+
+.text-highlight {
+  color: var(--pink);
+  font-style: italic;
+}
+
+/* =================== media queries =================== */
+
 /* =================== MOBILE =================== */
 @media only screen and (max-width: 40em) {}
+
+/* =================== TABLET =================== */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {}
+
+/* =================== DESKTOP =================== */
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {}

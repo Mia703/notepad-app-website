@@ -26,7 +26,7 @@ const Navigation: React.FC<NavigationProps> = ({ current }) => {
 					href={"/"}
 					className={`${spacing} ${
 						current == "home"
-							? "border-b-2 border-solid border-[var(--primary-accent-pink)]"
+							? "border-b-2 border-solid border-[var(--pink)]"
 							: ""
 					}`}
 				>
@@ -36,7 +36,7 @@ const Navigation: React.FC<NavigationProps> = ({ current }) => {
 					href={"#"}
 					className={`${spacing} ${
 						current == "about"
-							? "border-b-2 border-solid border-[var(--primary-accent-pink)]"
+							? "border-b-2 border-solid border-[var(--pink)]"
 							: ""
 					}`}
 				>
@@ -46,7 +46,7 @@ const Navigation: React.FC<NavigationProps> = ({ current }) => {
 					href={"#"}
 					className={`${spacing} ${
 						current == "help"
-							? "border-b-2 border-solid border-[var(--primary-accent-pink)]"
+							? "border-b-2 border-solid border-[var(--pink)]"
 							: ""
 					}`}
 				>
@@ -55,11 +55,8 @@ const Navigation: React.FC<NavigationProps> = ({ current }) => {
 				<Button
 					variant="contained"
 					endIcon={<KeyboardArrowDownIcon />}
-					sx={{
-						backgroundColor: "var(--primary-accent-pink)",
-						borderRadius: "10000px",
-						fontWeight: "600",
-					}}
+					className="button-pink"
+					aria-label="download app dropdown"
 				>
 					Download
 				</Button>

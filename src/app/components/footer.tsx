@@ -5,7 +5,7 @@ export default function Footer() {
 	return (
 		<nav
 			id="footer"
-			className="flex flex-row justify-between items-middle text-[var(--primary-dark-grey)]"
+			className="flex flex-row justify-between items-middle text-[var(--dark-grey)]"
 		>
 			<div className="logo">
 				<Link href={"/"}>Notepad</Link>
