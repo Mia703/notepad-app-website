@@ -20,7 +20,6 @@ interface NavigationProps {
 }
 
 const Navigation: React.FC<NavigationProps> = ({ current }) => {
-
 	// open and close mobile menu drawer
 	const [open, setOpen] = useState(false);
 	const toggleDrawer = (newOpen: boolean) => () => {
@@ -83,7 +82,6 @@ const Navigation: React.FC<NavigationProps> = ({ current }) => {
 	const handleClose = () => {
 		setAnchorEl(null);
 	};
-
 
 	return (
 		<nav
@@ -153,7 +151,6 @@ const Navigation: React.FC<NavigationProps> = ({ current }) => {
 						<Button
 							variant="contained"
 							endIcon={<KeyboardArrowDownIcon />}
-							className="button-pink"
 							size="medium"
 							id="basic-button"
 							aria-label="download app dropdown menu"
@@ -161,6 +158,11 @@ const Navigation: React.FC<NavigationProps> = ({ current }) => {
 							aria-haspopup="true"
 							aria-expanded={dropdownOpen ? "true" : undefined}
 							onClick={handleClick}
+							sx={{
+								backgroundColor: "var(--pink)",
+								borderRadius: "10000px",
+								fontWeight: "600",
+							}}
 						>
 							Download App
 						</Button>
