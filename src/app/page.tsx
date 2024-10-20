@@ -1,101 +1,178 @@
+import { Box, Button, Container, Typography } from "@mui/material";
 import Image from "next/image";
+import Navigation from "./components/navigation";
+import Footer from "./components/footer";
+import GoogleIcon from "@mui/icons-material/Google";
+import AppleIcon from "@mui/icons-material/Apple";
+import HomeScreen from "/public/home-screen.png";
+import SearchScreen from "/public/search-screen.png";
+import FilterScreen from "/public/filter-screen.png";
+import TagScreen from "/public/tag-screen.png";
+
+const FeaturesList = [
+  {
+    key: 1,
+    name: "Instant Search",
+    desc: "Quickly find notes as you type with your responsive search bar, ensuring you never lose track of important information.",
+    image: SearchScreen,
+    imageAlt:
+      "Screenshot of the Notepad app's instant search bar displaying search results based on relevant keywords",
+  },
+  {
+    key: 2,
+    name: "Filter by Time or Date",
+    desc: "Easily organise your notes by filtering the based on the time or date they were created or modified, giving you quick access to relevant content.",
+    image: FilterScreen,
+    imageAlt:
+      "Screenshot of the Notepad app's dropdown menu, allowing users to filter notes by time or date, with options 'By Time' or 'By Date'",
+  },
+  {
+    key: 3,
+    name: "Tagging System",
+    desc: "Add customisable tags to your notes for efficient organisation, making it simple to categorise and retrieve notes based on topics or themes.",
+    image: TagScreen,
+    imageAlt:
+      "Screenshot of the Notepad app's customisable tags, allowing users organize and categorize notes by hash tags",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <Container id="main-content" component={"main"}>
+      <Navigation current={"home"} />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      <Box
+        id="header-content"
+        component={"div"}
+        className="mt-5 md:grid md:grid-cols-2"
+      >
+        <Box
+          component={"div"}
+          className="left-container lg:flex lg:flex-col lg:justify-center"
+        >
+          <Typography
+            variant="h1"
+            sx={{
+              fontSize: {
+                xs: "3em",
+              },
+              marginBottom: 3,
+            }}
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            All your notes, <span className="text-highlight">effortlessly</span>{" "}
+            managed
+          </Typography>
+          <Typography variant="body1">
+            Staying organized shouldn't slow you down. Notepadd is designed for
+            busy people who need a quick way to manage their thoughts, tasks,
+            and ideas.
+          </Typography>
+          <Box component={"div"} className="buttons-container my-4">
+            <Button
+              variant="contained"
+              startIcon={<AppleIcon />}
+              size="medium"
+              className="mx-2 my-1"
+            >
+              Apple App Store
+            </Button>
+            <Button
+              variant="contained"
+              startIcon={<GoogleIcon />}
+              size="medium"
+              className="mx-2 my-1"
+            >
+              Google Play Store
+            </Button>
+          </Box>
+        </Box>
+        <Box
+          component={"div"}
+          className="right-container my-10 flex flex-row justify-center"
+        >
+          <Image
+            src={HomeScreen}
+            alt="Notepad's home screen. Featuring a minimalist interface with options to organize notes by tag on the top left or by date or time on the top right. Notes are located horizontally in the middle of the screen, with mobile menu at the bottom with the home, search, new note, and settings button"
+            className="md:w-[60%]"
+          />
+        </Box>
+      </Box>
+
+      <Box
+        id="feature-content"
+        component={"div"}
+        className="my-[5rem] text-center"
+      >
+        <Typography variant="h2">
+          Designed for{" "}
+          <span className="text-highlight">Speed & Simplicity</span>
+        </Typography>
+        <Container
+          id="features-container"
+          className="my-[2rem] md:grid md:grid-cols-3"
+        >
+          {FeaturesList.map((featureItem) => {
+            return (
+              <Container
+                component={"div"}
+                key={featureItem.key}
+                className="feature sm:my-[4rem] md:my-0 md:mt-[2rem]"
+              >
+                <Box>
+                  <Image src={featureItem.image} alt={featureItem.imageAlt} />
+                </Box>
+                <Box className="feature-content my-4">
+                  <Typography variant="h6" className="mb-4 text-white">
+                    {featureItem.name}
+                  </Typography>
+                  <Typography variant="body1">{featureItem.desc}</Typography>
+                </Box>
+              </Container>
+            );
+          })}
+        </Container>
+      </Box>
+
+      <Container
+        id="call-to-action"
+        component={"div"}
+        className="rounded-lg bg-[#585858] p-6 text-center sm:my-[5rem] lg:p-20"
+      >
+        <Typography
+          variant="h1"
+          sx={{
+            fontSize: {
+              xs: "3em",
+            },
+            marginBottom: 3,
+          }}
+        >
+          Try notepadd today
+        </Typography>
+        <Typography variant="body1">
+          Start simplifying your life today with Notepadd - where efficiency
+          meets ease.
+        </Typography>
+        <Box component={"div"} className="buttons-container my-4">
+          <Button
+            variant="contained"
+            startIcon={<AppleIcon />}
+            size="medium"
+            className="mx-2 my-1"
           >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+            Apple App Store
+          </Button>
+          <Button
+            variant="contained"
+            startIcon={<GoogleIcon />}
+            size="medium"
+            className="mx-2 my-1"
+          >
+            Google Play Store
+          </Button>
+        </Box>
+      </Container>
+      <Footer />
+    </Container>
   );
 }
