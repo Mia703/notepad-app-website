@@ -76,7 +76,9 @@ export default function Home() {
               variant="contained"
               startIcon={<AppleIcon />}
               size="medium"
-              className="mx-2 my-1"
+              sx={{
+                m: '1rem 2rem',
+              }}
             >
               Apple App Store
             </Button>
@@ -84,7 +86,9 @@ export default function Home() {
               variant="contained"
               startIcon={<GoogleIcon />}
               size="medium"
-              className="mx-2 my-1"
+              sx={{
+                m: '1rem 2rem',
+              }}
             >
               Google Play Store
             </Button>

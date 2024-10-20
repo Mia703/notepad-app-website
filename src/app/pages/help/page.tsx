@@ -66,7 +66,13 @@ export default function Help() {
         id="search-container"
         className="my-[2rem] text-center"
       >
-        <Typography variant="h2" className="mb-8 capitalize">
+        <Typography
+          variant="h2"
+          sx={{
+            marginBottom: 8,
+            textTransform: 'capitalize',
+          }}
+        >
           How can we help you?
         </Typography>
         <Container
