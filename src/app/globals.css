@@ -17,10 +17,6 @@
   --pink: #e058b9;
 
   --font: "Inter", sans-serif;
-  --main-header-size: 3em;
-  --second-header-size: 2em;
-  --third-header-size: 1.5em;
-  --paragraph-size: 1em;
 }
 
 /* =================== reset default styles =================== */
@@ -40,21 +36,21 @@ body {
 
 /* =================== font styles =================== */
 h1 {
-  font-size: var(--main-header-size);
+  font-size: 3em;
   text-transform: capitalize;
 }
 
 h2 {
-  font-size: var(--second-header-size);
+  font-size: 2em;
 }
 
 h3 {
-  font-size: var(--third-header-size);
+  font-size: 1.5em;
 }
 
 p,
 a {
-  font-size: var(--paragraph-size);
+  font-size: 1em;
 }
 
 /* =================== constants =================== */
@@ -67,4 +63,24 @@ a {
 .text-highlight {
   color: var(--pink);
   font-style: italic;
+}
+
+/* =================== DESKTOP =================== */
+@media only screen and (min-width: 64.063em) {
+  h1 {
+    font-size: 5em;
+  }
+
+  h2 {
+    font-size: 3em;
+  }
+
+  h3 {
+    font-size: 2em;
+  }
+
+  p,
+  a {
+    font-size: 1.12em;
+  }
 }
