@@ -77,7 +77,8 @@ export default function Home() {
               startIcon={<AppleIcon />}
               size="medium"
               sx={{
-                m: '1rem 2rem',
+                m: '0.3rem 1rem',
+                ml: 0,
               }}
             >
               Apple App Store
@@ -87,7 +88,8 @@ export default function Home() {
               startIcon={<GoogleIcon />}
               size="medium"
               sx={{
-                m: '1rem 2rem',
+                m: '0.3rem 1rem',
+                ml: 0,
               }}
             >
               Google Play Store
@@ -162,12 +164,15 @@ export default function Home() {
           Start simplifying your life today with Notepad - where efficiency
           meets ease.
         </Typography>
-        <Box component={"div"} className="buttons-container my-4">
+        <Box component={"div"} className="buttons-container my-4 text-center">
           <Button
             variant="contained"
             startIcon={<AppleIcon />}
             size="medium"
-            className="mx-2 my-1"
+            sx={{
+                m: '0.3rem 1rem',
+                ml: 0,
+              }}
           >
             Apple App Store
           </Button>
@@ -175,7 +180,10 @@ export default function Home() {
             variant="contained"
             startIcon={<GoogleIcon />}
             size="medium"
-            className="mx-2 my-1"
+            sx={{
+                m: '0.3rem 1rem',
+                ml: 0,
+              }}
           >
             Google Play Store
           </Button>
