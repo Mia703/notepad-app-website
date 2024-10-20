@@ -35,7 +35,7 @@ export default function Home() {
 							startIcon={<AppleIcon />}
 							size="medium"
 							className="my-2 mr-2"
-							aria-label="apple app store download button"
+							aria-label="apple app store download"
 							sx={{
 								backgroundColor: 'var(--pink)',
 								borderRadius: '10000px',
@@ -49,7 +49,7 @@ export default function Home() {
 							startIcon={<GoogleIcon />}
 							size="medium"
 							className="my-2"
-							aria-label="google play download button"
+							aria-label="google play download"
 							sx={{
 								backgroundColor: 'var(--pink)',
 								borderRadius: '10000px',
@@ -135,7 +135,7 @@ export default function Home() {
 							startIcon={<AppleIcon />}
 							size="medium"
 							className="button-pink my-2 mr-2"
-							aria-label="apple app store download button"
+							aria-label="apple app store download"
 						>
 							Apple App Store
 						</Button>
@@ -144,7 +144,7 @@ export default function Home() {
 							startIcon={<GoogleIcon />}
 							size="medium"
 							className="button-pink my-2"
-							aria-label="google play download button"
+							aria-label="google play download"
 						>
 							Google Play Store
 						</Button>
