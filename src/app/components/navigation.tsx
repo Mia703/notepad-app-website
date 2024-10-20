@@ -30,7 +30,7 @@ const Navigation: React.FC<NavigationProps> = ({ current }) => {
 		<Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
 			<List>
 				<ListItem disablePadding>
-					<Link href={"#"} passHref className="w-full">
+					<Link href={"/"} passHref className="w-full">
 						<ListItemButton
 							LinkComponent={"a"}
 							sx={{
@@ -55,7 +55,7 @@ const Navigation: React.FC<NavigationProps> = ({ current }) => {
 					</ListItemButton>
 				</ListItem>
 				<ListItem disablePadding>
-					<Link href={"/help"} passHref className="w-full">
+					<Link href={"/pages/help"} passHref className="w-full">
 						<ListItemButton
 							LinkComponent={"a"}
 							sx={{
@@ -64,7 +64,7 @@ const Navigation: React.FC<NavigationProps> = ({ current }) => {
 								},
 							}}
 						>
-							<ListItemText primary="Help Centre" />
+							<ListItemText primary="Help Center" />
 						</ListItemButton>
 					</Link>
 				</ListItem>
@@ -119,7 +119,7 @@ const Navigation: React.FC<NavigationProps> = ({ current }) => {
 				<div className="menu desktop hidden md:block">
 					<div className="container flex flex-row justify-between items-center">
 						<Link
-							href={"#"}
+							href={"/"}
 							className={
 								current == "home"
 									? "border-b-2 border-solid border-[var(--pink)] mx-4"
@@ -139,14 +139,14 @@ const Navigation: React.FC<NavigationProps> = ({ current }) => {
 							About
 						</Link>
 						<Link
-							href={"#"}
+							href={"/pages/help"}
 							className={
 								current == "help"
 									? "border-b-2 border-solid border-[var(--pink)] mx-4"
 									: "border-b-2 border-solid border-[var(--background)] transition ease-in-out duration-300 hover:border-[var(--pink)] mx-4"
 							}
 						>
-							Help Centre
+							Help Center
 						</Link>
 						<Button
 							variant="contained"
