@@ -25,7 +25,7 @@ export default function Footer() {
       id="footer"
       className="my-8 flex flex-row items-center justify-between text-sm text-[#C1C1C1]"
     >
-      <Box id="logo" component={"div"}>
+      <Box id="footer-logo" component={"div"}>
         <Link href={"/"}>Notepad</Link>
       </Box>
       <Box component={"div"}>
