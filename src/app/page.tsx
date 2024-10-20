@@ -5,9 +5,9 @@ import GoogleIcon from "@mui/icons-material/Google";
 import Navigation from "./components/navigation";
 import Image from "next/image";
 import homeScreen from "./public/assets/mobile-home-screen.svg";
-import searchScreen from './public/assets/mobile-search-screen.svg';
-import filterByScreen from './public/assets/mobile-filter-1-screen.svg';
-import filterTagsScreen from './public/assets/mobile-filter-2-screen.svg';
+import searchScreen from "./public/assets/mobile-search-screen.svg";
+import filterByScreen from "./public/assets/mobile-filter-1-screen.svg";
+import filterTagsScreen from "./public/assets/mobile-filter-2-screen.svg";
 import Footer from "./components/footer";
 
 export default function Home() {
@@ -21,8 +21,8 @@ export default function Home() {
 			>
 				<div className="header mb-8 lg:px-[5rem]">
 					<h1 className="leading-none">
-						All your notes, <br /> <span className="text-highlight">effortlessly</span>{" "}
-						managed
+						All your notes, <br />{" "}
+						<span className="text-highlight">effortlessly</span> managed
 					</h1>
 					<p className="py-4">
 						Staying organised shouldn't slow you down. Notepad is designed for
@@ -34,12 +34,13 @@ export default function Home() {
 							variant="contained"
 							startIcon={<AppleIcon />}
 							size="medium"
-							className="my-2 mr-2"
 							aria-label="apple app store download"
 							sx={{
-								backgroundColor: 'var(--pink)',
-								borderRadius: '10000px',
-								fontWeight: '600',
+								backgroundColor: "var(--pink)",
+								borderRadius: "10000px",
+								fontWeight: "600",
+								margin: "0.5rem 0 0.5rem",
+								marginRight: "0.5rem",
 							}}
 						>
 							Apple App Store
@@ -48,12 +49,12 @@ export default function Home() {
 							variant="contained"
 							startIcon={<GoogleIcon />}
 							size="medium"
-							className="my-2"
 							aria-label="google play download"
 							sx={{
-								backgroundColor: 'var(--pink)',
-								borderRadius: '10000px',
-								fontWeight: '600',
+								backgroundColor: "var(--pink)",
+								borderRadius: "10000px",
+								fontWeight: "600",
+								margin: "0.5rem 0 0.5rem",
 							}}
 						>
 							Google Play Store
@@ -70,7 +71,10 @@ export default function Home() {
 			</section>
 
 			<section id="features" className="text-center my-[4rem]">
-				<h2>Designed for <br /><span className="text-highlight">Speed & Simplicity</span></h2>
+				<h2>
+					Designed for <br />
+					<span className="text-highlight">Speed & Simplicity</span>
+				</h2>
 				<div className="features md:grid md:grid-cols-3 md:gap-4">
 					<div className="feature my-[4rem]">
 						<div className="image flex flex-row justify-center mb-6">
@@ -134,12 +138,13 @@ export default function Home() {
 							variant="contained"
 							startIcon={<AppleIcon />}
 							size="medium"
-							className="my-2 mr-2"
 							aria-label="apple app store download"
 							sx={{
-								backgroundColor: 'var(--pink)',
-								borderRadius: '1000px',
-								fontWeight: '600',
+								backgroundColor: "var(--pink)",
+								borderRadius: "1000px",
+								fontWeight: "600",
+								margin: "0.5rem 0 0.5rem",
+								marginRight: "0.5rem",
 							}}
 						>
 							Apple App Store
@@ -148,12 +153,12 @@ export default function Home() {
 							variant="contained"
 							startIcon={<GoogleIcon />}
 							size="medium"
-							className="my-2"
 							aria-label="google play download"
 							sx={{
-								backgroundColor: 'var(--pink)',
-								borderRadius: '1000px',
-								fontWeight: '600',
+								backgroundColor: "var(--pink)",
+								borderRadius: "1000px",
+								fontWeight: "600",
+								margin: "0.5rem 0 0.5rem",
 							}}
 						>
 							Google Play Store
