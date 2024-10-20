@@ -11,7 +11,7 @@ export default function Top() {
   };
 
   return (
-    <Container component={"div"} className="fixed bottom-4 right-4 text-right lg:hidden">
+    <Container component={"div"} className="fixed bottom-[4.5rem] right-4 text-right lg:hidden">
       <IconButton
         sx={{
           backgroundColor: "#E054B9",
