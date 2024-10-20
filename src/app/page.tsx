@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 import AppleIcon from "@mui/icons-material/Apple";
 import GoogleIcon from "@mui/icons-material/Google";
 import Navigation from "./components/navigation";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Footer from "./components/footer";
 
 export default function Home() {
