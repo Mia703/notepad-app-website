@@ -70,7 +70,7 @@ export default function Home() {
 			</section>
 
 			<section id="features" className="text-center my-[4rem]">
-				<h2>Designed for <span className="text-highlight">Speed & Simplicity</span></h2>
+				<h2>Designed for <br /><span className="text-highlight">Speed & Simplicity</span></h2>
 				<div className="features md:grid md:grid-cols-3 md:gap-4">
 					<div className="feature my-[4rem]">
 						<div className="image flex flex-row justify-center mb-6">
@@ -134,8 +134,13 @@ export default function Home() {
 							variant="contained"
 							startIcon={<AppleIcon />}
 							size="medium"
-							className="button-pink my-2 mr-2"
+							className="my-2 mr-2"
 							aria-label="apple app store download"
+							sx={{
+								backgroundColor: 'var(--pink)',
+								borderRadius: '1000px',
+								fontWeight: '600',
+							}}
 						>
 							Apple App Store
 						</Button>
@@ -143,8 +148,13 @@ export default function Home() {
 							variant="contained"
 							startIcon={<GoogleIcon />}
 							size="medium"
-							className="button-pink my-2"
+							className="my-2"
 							aria-label="google play download"
+							sx={{
+								backgroundColor: 'var(--pink)',
+								borderRadius: '1000px',
+								fontWeight: '600',
+							}}
 						>
 							Google Play Store
 						</Button>
