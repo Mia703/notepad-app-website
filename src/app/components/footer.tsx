@@ -23,10 +23,10 @@ export default function Footer() {
   return (
     <footer
       id="footer"
-      className="my-[1rem] flex flex-row items-center justify-between text-sm text-[#C1C1C1]"
+      className="my-8 flex flex-row items-center justify-between text-sm text-[#C1C1C1]"
     >
       <Box id="logo" component={"div"}>
-        <Link href={"/"}>Notepadd</Link>
+        <Link href={"/"}>Notepad</Link>
       </Box>
       <Box component={"div"}>
         {NavigationList.map((navItem) => {

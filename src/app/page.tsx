@@ -8,6 +8,7 @@ import HomeScreen from "/public/home-screen.png";
 import SearchScreen from "/public/search-screen.png";
 import FilterScreen from "/public/filter-screen.png";
 import TagScreen from "/public/tag-screen.png";
+import Top from "./components/top";
 
 const FeaturesList = [
   {
@@ -16,45 +17,48 @@ const FeaturesList = [
     desc: "Quickly find notes as you type with your responsive search bar, ensuring you never lose track of important information.",
     image: SearchScreen,
     imageAlt:
-      "Screenshot of the Notepad app's instant search bar displaying search results based on relevant keywords",
+      "Screenshot of the Notepad app's search bar, located in the lower middle of the screen, displaying search results based on relevant keywords.",
   },
   {
     key: 2,
     name: "Filter by Time or Date",
-    desc: "Easily organise your notes by filtering the based on the time or date they were created or modified, giving you quick access to relevant content.",
+    desc: "Easily organize your notes by filtering the based on the time or date notes were created or modified, giving you quick access to relevant content.",
     image: FilterScreen,
     imageAlt:
-      "Screenshot of the Notepad app's dropdown menu, allowing users to filter notes by time or date, with options 'By Time' or 'By Date'",
+      "Screenshot of the Notepad app's filter dropdown menu. Located on top right, the drop down menu allows users to filter notes by time or date, with options titled 'By Time' or 'By Date'",
   },
   {
     key: 3,
     name: "Tagging System",
-    desc: "Add customisable tags to your notes for efficient organisation, making it simple to categorise and retrieve notes based on topics or themes.",
+    desc: "Add customizable tags to your notes for efficient organization, making it simple to categorize and retrieve notes based on topics or themes.",
     image: TagScreen,
     imageAlt:
-      "Screenshot of the Notepad app's customisable tags, allowing users organize and categorize notes by hash tags",
+      "Screenshot of the Notepad app's customisable tags drop down men. Located on the top left, the drop down menu allows users organize and categorize notes by user-created hash tags",
   },
 ];
 
 export default function Home() {
   return (
     <Container id="main-content" component={"main"}>
+      <Top />
+      {/* main navigation */}
       <Navigation current={"home"} />
-
+      {/* header container */}
       <Box
         id="header-content"
         component={"div"}
-        className="mt-5 md:grid md:grid-cols-2"
+        className="mt-5 grid grid-cols-1 md:grid-cols-2"
       >
         <Box
           component={"div"}
-          className="left-container lg:flex lg:flex-col lg:justify-center"
+          className="left-container md:flex md:flex-col md:justify-center"
         >
           <Typography
             variant="h1"
             sx={{
               fontSize: {
                 xs: "3em",
+                lg: "5em",
               },
               marginBottom: 3,
             }}
@@ -63,7 +67,7 @@ export default function Home() {
             managed
           </Typography>
           <Typography variant="body1">
-            Staying organized shouldn't slow you down. Notepadd is designed for
+            Staying organized shouldn't slow you down. Notepad is designed for
             busy people who need a quick way to manage their thoughts, tasks,
             and ideas.
           </Typography>
@@ -97,7 +101,7 @@ export default function Home() {
           />
         </Box>
       </Box>
-
+      {/* feature container */}
       <Box
         id="feature-content"
         component={"div"}
@@ -109,14 +113,14 @@ export default function Home() {
         </Typography>
         <Container
           id="features-container"
-          className="my-[2rem] md:grid md:grid-cols-3"
+          className="my-[2rem] grid grid-cols-1 gap-4 md:grid-cols-3"
         >
           {FeaturesList.map((featureItem) => {
             return (
               <Container
                 component={"div"}
                 key={featureItem.key}
-                className="feature sm:my-[4rem] md:my-0 md:mt-[2rem]"
+                className="feature my-[4rem] md:my-0 md:mt-[2rem]"
               >
                 <Box>
                   <Image src={featureItem.image} alt={featureItem.imageAlt} />
@@ -132,7 +136,7 @@ export default function Home() {
           })}
         </Container>
       </Box>
-
+      {/* call to action container */}
       <Container
         id="call-to-action"
         component={"div"}
@@ -143,14 +147,15 @@ export default function Home() {
           sx={{
             fontSize: {
               xs: "3em",
+              lg: "5em",
             },
             marginBottom: 3,
           }}
         >
-          Try notepadd today
+          Try Notepad today
         </Typography>
         <Typography variant="body1">
-          Start simplifying your life today with Notepadd - where efficiency
+          Start simplifying your life today with Notepad - where efficiency
           meets ease.
         </Typography>
         <Box component={"div"} className="buttons-container my-4">
@@ -172,6 +177,7 @@ export default function Home() {
           </Button>
         </Box>
       </Container>
+      {/* footer */}
       <Footer />
     </Container>
   );

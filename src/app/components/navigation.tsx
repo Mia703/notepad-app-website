@@ -81,7 +81,7 @@ const Navigation: React.FC<NavigationProps> = ({ current }) => {
       className="flex flex-row items-center justify-between"
     >
       <Box id="logo">
-        <Link href={"/"}>Notepadd</Link>
+        <Link href={"/"}>Notepad</Link>
       </Box>
       <Box className="mobile-menu-container lg:hidden">
         <IconButton
@@ -105,7 +105,7 @@ const Navigation: React.FC<NavigationProps> = ({ current }) => {
               className={
                 current == navItem.slug
                   ? "mx-4 border-b-2 border-solid border-[#E054B9]"
-                  : "mx-4 border-b-2 border-solid border-transparent transition duration-300 ease-in hover:border-[#E054B9]"
+                  : "mx-4 border-b-2 border-solid border-transparent transition duration-250 ease-in hover:border-[#E054B9]"
               }
             >
               {navItem.name}

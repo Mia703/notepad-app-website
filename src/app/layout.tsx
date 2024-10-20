@@ -3,7 +3,7 @@ import "./globals.css";
 import ThemeProviderWrapper from "./ThemeProviderWrapper";
 
 export const metadata: Metadata = {
-  title: "Notepadd App",
+  title: "Notepad App",
   description: "A simple notepad for all",
 };
 
