@@ -47,11 +47,12 @@ export default function Home() {
 				</div>
 				<div className="image">
 					<Image
-						src="/public/mobile-home-screen.png"
+						src="/assets/mobile-home-screen.png"
 						alt="Screenshot of the Notepad app's home screen, featuring a clean, minimalist interface with a quick search bar at the top, a list of recent notes, and options for creating new notes"
-						width={800}
-						height={500}
+						width={100}
+						height={100}
 						layout="responsive"
+						className="w-full"
 					/>
 				</div>
 			</section>
