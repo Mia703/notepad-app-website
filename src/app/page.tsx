@@ -34,8 +34,13 @@ export default function Home() {
 							variant="contained"
 							startIcon={<AppleIcon />}
 							size="medium"
-							className="button-pink my-2 mr-2"
+							className="my-2 mr-2"
 							aria-label="apple app store download button"
+							sx={{
+								backgroundColor: 'var(--pink)',
+								borderRadius: '10000px',
+								fontWeight: '600',
+							}}
 						>
 							Apple App Store
 						</Button>
@@ -43,8 +48,13 @@ export default function Home() {
 							variant="contained"
 							startIcon={<GoogleIcon />}
 							size="medium"
-							className="button-pink my-2"
+							className="my-2"
 							aria-label="google play download button"
+							sx={{
+								backgroundColor: 'var(--pink)',
+								borderRadius: '10000px',
+								fontWeight: '600',
+							}}
 						>
 							Google Play Store
 						</Button>
