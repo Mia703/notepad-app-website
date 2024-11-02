@@ -75,6 +75,9 @@ const Navigation: React.FC<NavigationProps> = ({ current }) => {
     setButtonAnchor(null);
   };
 
+  const figmaLink =
+    "https://www.figma.com/proto/IsLt5JOSJ8J5dLpGVI6Eix/Notepad---Usability-Design?page-id=27%3A229&node-id=347-357&node-type=frame&viewport=911%2C678%2C0.28&t=RV4uiB461OE9GCFm-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=347%3A357";
+
   return (
     <nav
       id="main-navigation"
@@ -132,8 +135,12 @@ const Navigation: React.FC<NavigationProps> = ({ current }) => {
           onClose={handleDropDownClose}
           MenuListProps={{ "aria-labelledby": "download-button" }}
         >
-          <MenuItem>iOS</MenuItem>
-          <MenuItem>Android</MenuItem>
+          <MenuItem>
+            <Link href={figmaLink} target="_blank">iOS</Link>
+          </MenuItem>
+          <MenuItem>
+            <Link href={figmaLink} target="_blank">Android</Link>
+          </MenuItem>
         </Menu>
       </Box>
     </nav>
