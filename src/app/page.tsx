@@ -37,6 +37,9 @@ const FeaturesList = [
   },
 ];
 
+const figmaLink =
+  "https://www.figma.com/proto/IsLt5JOSJ8J5dLpGVI6Eix/Notepad---Usability-Design?page-id=27%3A229&node-id=347-357&node-type=frame&viewport=911%2C678%2C0.28&t=RV4uiB461OE9GCFm-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=347%3A357";
+
 export default function Home() {
   return (
     <Container id="main-content" component={"main"}>
@@ -77,9 +80,11 @@ export default function Home() {
               startIcon={<AppleIcon />}
               size="medium"
               sx={{
-                m: '0.3rem 1rem',
+                m: "0.3rem 1rem",
                 ml: 0,
               }}
+              href={figmaLink}
+              target="_blank"
             >
               Apple App Store
             </Button>
@@ -88,9 +93,11 @@ export default function Home() {
               startIcon={<GoogleIcon />}
               size="medium"
               sx={{
-                m: '0.3rem 1rem',
+                m: "0.3rem 1rem",
                 ml: 0,
               }}
+              href={figmaLink}
+              target="_blank"
             >
               Google Play Store
             </Button>
@@ -170,9 +177,11 @@ export default function Home() {
             startIcon={<AppleIcon />}
             size="medium"
             sx={{
-                m: '0.3rem 1rem',
-                ml: 0,
-              }}
+              m: "0.3rem 1rem",
+              ml: 0,
+            }}
+            href={figmaLink}
+            target="_blank"
           >
             Apple App Store
           </Button>
@@ -181,9 +190,11 @@ export default function Home() {
             startIcon={<GoogleIcon />}
             size="medium"
             sx={{
-                m: '0.3rem 1rem',
-                ml: 0,
-              }}
+              m: "0.3rem 1rem",
+              ml: 0,
+            }}
+            href={figmaLink}
+            target="_blank"
           >
             Google Play Store
           </Button>
