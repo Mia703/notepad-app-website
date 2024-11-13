@@ -4,10 +4,11 @@ import Navigation from "./components/navigation";
 import Footer from "./components/footer";
 import GoogleIcon from "@mui/icons-material/Google";
 import AppleIcon from "@mui/icons-material/Apple";
-import HomeScreen from "/public/home-screen.png";
-import SearchScreen from "/public/search-screen.png";
-import FilterScreen from "/public/filter-screen.png";
-import TagScreen from "/public/tag-screen.png";
+// Why the double back slashes?
+import HomeScreen from ".//public/mobile-home-screen.png";
+import SearchScreen from ".//public/mobile-search-screen.png";
+import FilterScreen from ".//public/mobile-filter-screen.png";
+import TagScreen from ".//public/mobile-hashtag-screen.png";
 import Top from "./components/top";
 
 const FeaturesList = [
